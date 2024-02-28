@@ -10,4 +10,10 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'Piano-ggt';
+  aplicarSonido(numero: number): void {
+    const audio = new Audio();
+      audio.src = '../assets/sounds/note' + numero + '.wav'; 
+      audio.load();
+      audio.play();
+  }
 }
